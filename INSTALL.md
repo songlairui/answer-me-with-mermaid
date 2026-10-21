@@ -10,7 +10,7 @@ plus Ondine's WebAssembly compiler (`scripts/ondine.wasm`, ~3.7 MB). Keep both t
 next to `amm.mjs` once after cloning (Node 20+):
 
 ```bash
-git clone https://github.com/<owner>/answer-me-with-mermaid.git
+git clone https://github.com/songlairui/answer-me-with-mermaid.git
 cd answer-me-with-mermaid
 npm install && npm run build   # writes skills/answer-me-with-mermaid/scripts/ondine.wasm
 ```
@@ -20,7 +20,7 @@ Without it the CLI exits with a message telling you to run `npm run build`.
 ## Option A — skills CLI
 
 ```bash
-npx skills add <owner>/answer-me-with-mermaid
+npx skills add songlairui/answer-me-with-mermaid
 ```
 
 Then run `npm install && npm run build` in a clone (above) and copy
