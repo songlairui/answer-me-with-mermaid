@@ -3,9 +3,11 @@
 answer-me-with-mermaid builds on the following projects. Their license texts are
 reproduced below as required by their licenses.
 
-The bundled CLI `skills/answer-me-with-mermaid/scripts/amm.mjs` **includes Pele**
-(compiled in by esbuild), so the Pele notice (and the Lucide notice that Pele carries)
-applies to that file.
+The bundled CLI `skills/answer-me-with-mermaid/scripts/amm.mjs` **includes Ondine's
+JavaScript** (compiled in by esbuild), and `skills/answer-me-with-mermaid/scripts/ondine.wasm`
+**is Ondine's WebAssembly compiler**, copied unmodified from the `ondine` npm package by
+`npm run build` (it is not committed to this repository). The
+Ondine notice below applies to both files.
 
 ---
 
@@ -42,16 +44,18 @@ SOFTWARE.
 
 ---
 
-## Pele
+## Ondine
 
-- Project: https://github.com/obsidianmd/pele — https://pele.run
-- Use: Mermaid parsing, validation, and SVG rendering; bundled into `amm.mjs`.
-- License: MIT
+- Project: https://github.com/wevm/ondine — https://ondine.sh — npm `ondine`
+- Use: Mermaid parsing, validation, and SVG rendering; JS bundled into `amm.mjs`,
+  compiler shipped as `ondine.wasm`.
+- License: MIT. The upstream LICENSE names no copyright holder after the year; it is
+  reproduced verbatim below. The project is published by wevm (https://github.com/wevm).
 
 ```
 MIT License
 
-Copyright (c) 2026 kepano
+Copyright (c) 2025-present 
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -70,25 +74,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-```
-
-### Lucide (included in Pele)
-
-Pele's LICENSE notes that the reset icon of its zoom controls is "rotate-ccw" from
-Lucide v1.14.0 (https://lucide.dev):
-
-```
-Copyright (c) 2026 Lucide Icons and Contributors
-
-Permission to use, copy, modify, and/or distribute this software for any
-purpose with or without fee is hereby granted, provided that the above
-copyright notice and this permission notice appear in all copies.
-
-THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 ```

@@ -1,6 +1,6 @@
 ---
 name: answer-me-with-mermaid
-description: Answer questions with standard Mermaid diagrams when structure is easier to see than to read — processes, sequences, states, relationships, hierarchies, timelines, comparisons. Diagrams are validated and rendered offline by the bundled `amm` CLI (built on Pele) into SVG and a single-file HTML page.
+description: Answer questions with standard Mermaid diagrams when structure is easier to see than to read — processes, sequences, states, relationships, hierarchies, timelines, comparisons. Diagrams are validated and rendered offline by the bundled `amm` CLI (built on Ondine) into SVG and a single-file HTML page.
 ---
 
 # Answer me with Mermaid
@@ -77,6 +77,8 @@ Then render:
 ```bash
 node <skill-dir>/scripts/amm.mjs render answer.md -o answer.html
 ```
+
+`amm.mjs` needs `ondine.wasm` (the Ondine compiler) in the same folder; keep them together.
 
 This writes one self-contained offline HTML file (light/dark via CSS variables, follows the
 system setting by default; `--theme light|dark|auto`) and an `answer.svg/` folder with one SVG

@@ -1,14 +1,14 @@
 {
   "name": "answer-me-with-mermaid",
   "version": "0.1.0",
-  "description": "An agent skill that makes the model answer with standard Mermaid diagrams, validated and rendered offline by Pele.",
+  "description": "An agent skill that makes the model answer with standard Mermaid diagrams, validated and rendered offline by Ondine.",
   "license": "MIT",
   "type": "module",
   "bin": {
     "amm": "./skills/answer-me-with-mermaid/scripts/amm.mjs"
   },
   "scripts": {
-    "build": "esbuild src/cli.js --bundle --platform=node --format=esm --target=node20 --outfile=skills/answer-me-with-mermaid/scripts/amm.mjs --legal-comments=inline --banner:js=\"#!/usr/bin/env node\"",
+    "build": "esbuild src/cli.js --bundle --platform=node --format=esm --target=node20 --outfile=skills/answer-me-with-mermaid/scripts/amm.mjs --legal-comments=inline && node scripts/copy-wasm.mjs",
     "dev": "node src/cli.js",
     "test": "node --test test/"
   },
@@ -16,10 +16,16 @@
     "node": ">=20"
   },
   "dependencies": {
-    "pele": "^1.8.0"
+    "ondine": "^0.0.3"
   },
   "devDependencies": {
     "esbuild": "^0.28.2"
   },
-  "keywords": ["mermaid", "pele", "agent-skill", "diagram", "svg"]
+  "keywords": [
+    "mermaid",
+    "ondine",
+    "agent-skill",
+    "diagram",
+    "svg"
+  ]
 }
